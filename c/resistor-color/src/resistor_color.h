@@ -17,6 +17,6 @@ typedef enum {
 } resistor_band_t;
 
 int color_code(resistor_band_t r);
-resistor_band_t* colors();
+int* colors();
 
 #endif

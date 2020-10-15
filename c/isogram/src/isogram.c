@@ -59,14 +59,11 @@ bool is_isogram(const char phrase[]) {
         if (index == -1) {
             continue;
         } else {
-            phrase_alpha[index] += 1;
-        }
-    }
-
-
-    for (int i = 0; i < ALPHA_LEN; i++) {
-        if (phrase_alpha[i] > 1) {
-            return 0;
+            if (phrase_alpha[index] > 0) {
+                return false;
+            } else {
+                phrase_alpha[index] += 1;
+            }
         }
     }
     return 1;

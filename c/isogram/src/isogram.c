@@ -53,9 +53,10 @@ bool is_isogram(const char phrase[]) {
     
     // iterate through every character in phrase
     // find index and add it to phrase_alpha
-    const char* current;    
-    for (current = phrase; *current != '\0'; current++) {
-        int index = alpha_index(current[0]);
+    int phrase_len = strlen(phrase);   
+    for (int i = 0; i < phrase_len; i++) {
+        const char current = phrase[i];
+        int index = alpha_index(current);
         if (index == -1) {
             continue;
         } else {

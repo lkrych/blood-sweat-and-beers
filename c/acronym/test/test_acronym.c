@@ -107,6 +107,14 @@ static void test_underscore_emphasis(void)
    check_abbreviation(phrase, expected);
 }
 
+static void test_double_underscore_emphasis(void)
+{
+   // TEST_IGNORE();
+   char *phrase = "The Road __Not__ Taken";
+   char *expected = "TRNT";
+   check_abbreviation(phrase, expected);
+}
+
 int main(void)
 {
    UnityBegin("test/test_acronym.c");
@@ -122,6 +130,7 @@ int main(void)
    RUN_TEST(test_consecutive_delimiters_abbreviation);
    RUN_TEST(test_apostrophes);
    RUN_TEST(test_underscore_emphasis);
+   RUN_TEST(test_double_underscore_emphasis);
 
    return UnityEnd();
 }

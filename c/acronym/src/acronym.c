@@ -10,8 +10,8 @@ char *abbreviate(const char *phrase) {
     char *non_constant_phrase = malloc(strlen(phrase) * sizeof(char));
     strcpy(non_constant_phrase, phrase); 
 
-    //use strtok to break up the phrase with a delimiter
-    char *delim = " ";
+    //use strtok to break up the phrase with delimiters
+    char *delim = " _-";
     char *ptr = strtok(non_constant_phrase, delim);
 
     // acronym could at most be of length strlen(phrase)

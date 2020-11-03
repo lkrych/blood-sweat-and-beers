@@ -10,7 +10,7 @@ int word_count(const char *input_text, word_count_word_t *words) {
     char *copy_input = (char *)malloc(strlen(input_text) * sizeof(char));
     strcpy(copy_input, input_text);
     //split by any whitespace
-    char delimit[]=" ,\t\r\n\v\f";
+    char delimit[]=" ,\t\r\n\v\f:!&@$%^&";
     char* word = strtok(copy_input, delimit);
 
     // loop through the string to extract all other tokens

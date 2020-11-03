@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+
 
 int word_count(const char *input_text, word_count_word_t *words) {
     int unique_words = 0;
@@ -10,13 +12,19 @@ int word_count(const char *input_text, word_count_word_t *words) {
     char *copy_input = (char *)malloc(strlen(input_text) * sizeof(char));
     strcpy(copy_input, input_text);
     //split by any whitespace
-    char delimit[]=" ,\t\r\n\v\f:!&@$%^&";
+    char delimit[]=" \t\r\n\v\f,:!&@$%^&.";
     char* word = strtok(copy_input, delimit);
 
     // loop through the string to extract all other tokens
     while( word != NULL ) {
         printf( " %s\n", word ); //printing each token
         //check if word exists in words
+        for (int i = 0; word[i]; i++){
+            if (isdigit(word[i])) {
+                continue;
+            }
+            word[i] = tolower(word[i]);
+        }
 
         for(int i = 0; i < MAX_WORDS; i++) {
             struct word_count_word current_word = words[i];

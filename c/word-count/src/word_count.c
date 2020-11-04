@@ -7,6 +7,7 @@
 
 int word_count(const char *input_text, word_count_word_t *words) {
     int unique_words = 0;
+    int word_count = 0;
     // c doesn't let you iterate through a const char, 
     // so we need to copy it to another string
     char *copy_input = (char *)malloc(strlen(input_text) * sizeof(char));
@@ -17,6 +18,7 @@ int word_count(const char *input_text, word_count_word_t *words) {
 
     // loop through the string to extract all other tokens
     while( word != NULL ) {
+        word_count++;
         //lowercase all characters in word
         for (int i = 0; word[i]; i++){
             if (isdigit(word[i])) {
@@ -35,8 +37,16 @@ int word_count(const char *input_text, word_count_word_t *words) {
             }
             word[strlen(word) - 2] = '\0';
         }
+        
+        //check if word obeys max_length rule
+        if (strlen(word) > MAX_WORD_LENGTH) {
+            unique_words = EXCESSIVE_LENGTH_WORD;
+            break;
+        }
 
-        printf( " %s\n", word ); //printing each token
+        if (unique_words >= 20) {
+            unique_words = EXCESSIVE_NUMBER_OF_WORDS;
+        }
 
         // check if word exists in words
         for(int i = 0; i < MAX_WORDS; i++) {

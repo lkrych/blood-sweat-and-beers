@@ -17,8 +17,7 @@ int word_count(const char *input_text, word_count_word_t *words) {
 
     // loop through the string to extract all other tokens
     while( word != NULL ) {
-        printf( " %s\n", word ); //printing each token
-        //check if word exists in words
+        //lowercase all characters in word
         for (int i = 0; word[i]; i++){
             if (isdigit(word[i])) {
                 continue;
@@ -26,6 +25,20 @@ int word_count(const char *input_text, word_count_word_t *words) {
             word[i] = tolower(word[i]);
         }
 
+        //strip quotes from word
+        int first_quote = (word[0] == '\'');
+        int last_quote = (word[strlen(word) - 1] == '\'');
+
+        if (first_quote == 1 && last_quote == 1) {
+            for (int i = 1; i < (int)strlen(word) - 1; i++) {
+                word[i-1] = word[i];
+            }
+            word[strlen(word) - 2] = '\0';
+        }
+
+        printf( " %s\n", word ); //printing each token
+
+        // check if word exists in words
         for(int i = 0; i < MAX_WORDS; i++) {
             struct word_count_word current_word = words[i];
             //first check the words that already exist

@@ -30,7 +30,6 @@ static void test_perfect_lower_case(void)
 
 static void test_only_lower_case(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "the quick brown fox jumps over the lazy dog";
 
    TEST_ASSERT_TRUE(is_pangram(sentence));
@@ -38,7 +37,6 @@ static void test_only_lower_case(void)
 
 static void test_missing_letter_x(void)
 {
-   TEST_IGNORE();
    const char sentence[] =
        "a quick movement of the enemy will jeopardize five gunboats";
 
@@ -47,7 +45,6 @@ static void test_missing_letter_x(void)
 
 static void test_missing_letter_h(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "five boxing wizards jump quickly at it";
 
    TEST_ASSERT_FALSE(is_pangram(sentence));

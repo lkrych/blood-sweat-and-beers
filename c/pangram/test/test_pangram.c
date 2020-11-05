@@ -52,7 +52,6 @@ static void test_missing_letter_h(void)
 
 static void test_with_underscores(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "the_quick_brown_fox_jumps_over_the_lazy_dog";
 
    TEST_ASSERT_TRUE(is_pangram(sentence));
@@ -60,7 +59,6 @@ static void test_with_underscores(void)
 
 static void test_with_numbers(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "the 1 quick brown fox jumps over the 2 lazy dogs";
 
    TEST_ASSERT_TRUE(is_pangram(sentence));
@@ -68,7 +66,6 @@ static void test_with_numbers(void)
 
 static void test_missing_letters_replaced_by_numbers(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog";
 
    TEST_ASSERT_FALSE(is_pangram(sentence));
@@ -76,7 +73,6 @@ static void test_missing_letters_replaced_by_numbers(void)
 
 static void test_mixed_case_and_punctuation(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "\"Five quacking Zephyrs jolt my wax bed.\"";
 
    TEST_ASSERT_TRUE(is_pangram(sentence));
@@ -84,7 +80,6 @@ static void test_mixed_case_and_punctuation(void)
 
 static void test_case_insensitive(void)
 {
-   TEST_IGNORE();
    const char sentence[] = "the quick brown fox jumps over with lazy FX";
 
    TEST_ASSERT_FALSE(is_pangram(sentence));

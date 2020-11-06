@@ -55,7 +55,6 @@ static void test_date(void)
 
 static void test_another_date(void)
 {
-   TEST_IGNORE();               // delete this line to run test
    time_t expected = construct_date(2009, 2, 19, 1, 46, 40);
    time_t actual = gigasecond_after(construct_date(1977, 6, 13, 0, 0, 0));
    TEST_ASSERT(expected == actual);

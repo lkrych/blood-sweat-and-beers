@@ -21,13 +21,11 @@ static void test_convert_mercury_year(void)
 
 static void test_convert_venus_year(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_FLOAT_WITHIN(1, 9.78, convert_planet_age(VENUS, 189839836));
 }
 
 static void test_convert_mars_year(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_FLOAT_WITHIN(1, 39.25, convert_planet_age(MARS, 2329871239));
 }
 

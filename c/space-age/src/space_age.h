@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+#define DAYS_IN_YEAR 365.25
+#define SECONDS_IN_DAY 86400
+
 typedef enum planet {
    MERCURY,
    VENUS,

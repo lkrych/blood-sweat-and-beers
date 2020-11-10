@@ -16,7 +16,7 @@ char bio_translation(char c) {
         case 'A':
             return 'U';
         default:
-            printf("%c is an invalid DNA nucleotide -- Skipping", c);
+            //special case of invalid nucleotide
             return ' ';
     }
 }
@@ -27,7 +27,11 @@ char *to_rna(const char *dna) {
     }
     char* rna = (char*) malloc(strlen(dna));
     for(int i = 0; i < (int)strlen(dna); i++) {
-        rna[i] = bio_translation(dna[i]);
+        char c = bio_translation(dna[i]);
+        if (strcmp(&c, " ") == 0) {
+            return NULL;
+        }
+        rna[i] = c;
     }
     return rna;
 }

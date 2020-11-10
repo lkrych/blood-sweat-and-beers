@@ -28,7 +28,7 @@ char *to_rna(const char *dna) {
     char* rna = (char*) malloc(strlen(dna));
     for(int i = 0; i < (int)strlen(dna); i++) {
         char c = bio_translation(dna[i]);
-        if (strcmp(&c, " ") == 0) {
+        if (c == ' ') {
             return NULL;
         }
         rna[i] = c;

@@ -54,13 +54,11 @@ static void test_handle_invalid_nucleotide(void)
 
 static void test_handle_completely_invalid_input(void)
 {
-   TEST_IGNORE();
    test_failure("XXX");
 }
 
 static void test_handle_partially_invalid_input(void)
 {
-   TEST_IGNORE();
    test_failure("ACGTXXXCTTAA");
 }
 

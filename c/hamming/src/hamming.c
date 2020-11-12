@@ -12,7 +12,7 @@ int compute(const char *lhs, const char *rhs) {
 
     int hamming_distance = 0;
     for (int i = 0; i < s_len; i++) {
-        if (strcmp(&lhs[i], &rhs[i]) != 0) {
+        if (lhs[i] != rhs[i]) {
             hamming_distance++;
         }
     }

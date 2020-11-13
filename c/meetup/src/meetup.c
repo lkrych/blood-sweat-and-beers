@@ -28,21 +28,21 @@ int get_count(const char* week) {
 
 int meetup_day_of_month(unsigned int year, unsigned int month, const char *week, const char *day_of_week) {
     int month_for_time_struct = month - 1;
-    printf("=====================================\n");
-    printf("Constructing tm for %s, %u %u\n", day_of_week, month_for_time_struct, year-1900);
-    printf("=====================================\n");
+    // printf("=====================================\n");
+    // printf("Constructing tm for %s, %u %u\n", day_of_week, month_for_time_struct, year-1900);
+    // printf("=====================================\n");
     struct tm t = { .tm_year=year-1900, .tm_mon=month_for_time_struct, .tm_mday=1};
     mktime(&t);
     int day_of_week_count = 0;
     int day_of_month = 1;
     int needed_count = get_count(week);
-    printf("=====================================\n");
-    printf("searching for %d, %s\n", needed_count, day_of_week);
-    printf("=====================================\n");
+    // printf("=====================================\n");
+    // printf("searching for %d, %s\n", needed_count, day_of_week);
+    // printf("=====================================\n");
     int current_month = (int) month_for_time_struct;
     while (current_month == (int) month_for_time_struct) {
         const char* current_day = weekday[t.tm_wday];
-        printf("current day is %s, current count is %d\n", current_day, day_of_week_count);
+        // printf("current day is %s, current count is %d\n", current_day, day_of_week_count);
         if (current_day == day_of_week) {
             day_of_week_count += 1;
             if (needed_count == TEENTH && day_of_month >= 13 && day_of_month <= 19) {

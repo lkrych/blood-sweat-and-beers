@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 #define TEENTH 9
+#define LAST 8
 
 const char * weekday[] = { "Sunday", "Monday",
                              "Tuesday", "Wednesday",
@@ -21,6 +22,8 @@ int get_count(const char* week) {
     } else if (strcmp(week, "teenth") == 0) {
         // nonsense number we can use as switch
         return TEENTH;
+    } else if (strcmp(week, "last") == 0) {
+        return LAST;
     }
     return 5;
 }
@@ -36,6 +39,7 @@ int meetup_day_of_month(unsigned int year, unsigned int month, const char *week,
     int day_of_week_count = 0;
     int day_of_month = 1;
     int needed_count = get_count(week);
+    int last_counted_day = 0;
     // printf("=====================================\n");
     // printf("searching for %d, %s\n", needed_count, day_of_week);
     // printf("=====================================\n");
@@ -45,6 +49,7 @@ int meetup_day_of_month(unsigned int year, unsigned int month, const char *week,
         // printf("current day is %s, current count is %d\n", current_day, day_of_week_count);
         if (current_day == day_of_week) {
             day_of_week_count += 1;
+            last_counted_day = day_of_month;
             if (needed_count == TEENTH && day_of_month >= 13 && day_of_month <= 19) {
                 // found the teenth day
                 break;
@@ -60,5 +65,10 @@ int meetup_day_of_month(unsigned int year, unsigned int month, const char *week,
         day_of_month += 1;
         current_month = t.tm_mon;
     }
+    
+    if (needed_count == LAST) {
+        return last_counted_day;
+    }
+
     return day_of_month;
 }

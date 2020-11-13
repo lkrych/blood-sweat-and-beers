@@ -19,6 +19,8 @@ int get_count(const char* week) {
         return 3;
     } else if (strcmp(week, "fourth") == 0) {
         return 4;
+    } else if (strcmp(week, "fourth") == 0) {
+        return 5;
     } else if (strcmp(week, "teenth") == 0) {
         // nonsense number we can use as switch
         return TEENTH;
@@ -51,7 +53,7 @@ int meetup_day_of_month(unsigned int year, unsigned int month, const char *week,
             day_of_week_count += 1;
             last_counted_day = day_of_month;
             if (needed_count == TEENTH && day_of_month >= 13 && day_of_month <= 19) {
-                // found the teenth day
+                // edge case for the teenth day
                 break;
             }
         }
@@ -65,9 +67,13 @@ int meetup_day_of_month(unsigned int year, unsigned int month, const char *week,
         day_of_month += 1;
         current_month = t.tm_mon;
     }
-    
+    // edge case for last
     if (needed_count == LAST) {
         return last_counted_day;
+    }
+    // edge case for missing fifth count
+    if (needed_count != day_of_week_count && (needed_count == 5)) {
+        return 0;
     }
 
     return day_of_month;

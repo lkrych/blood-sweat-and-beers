@@ -524,19 +524,16 @@ static void test_last_Sunday_of_February_2015(void)
 
 static void test_first_Friday_of_December_2012(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(7, meetup_day_of_month(2012, 12, "first", "Friday"));
 }
 
 static void test_fifth_Friday_of_December_2016(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(30, meetup_day_of_month(2016, 12, "fifth", "Friday"));
 }
 
 static void test_fifth_Friday_of_February_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(0, meetup_day_of_month(2013, 02, "fifth", "Friday"));
 }
 

@@ -21,189 +21,194 @@ static void test_monteenth_of_August_2013(void)
 
 static void test_monteenth_of_September_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16, meetup_day_of_month(2013, 9, "teenth", "Monday"));
 }
 
 static void test_tuesteenth_of_March_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19, meetup_day_of_month(2013, 3, "teenth", "Tuesday"));
 }
 
 static void test_tuesteenth_of_April_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16, meetup_day_of_month(2013, 4, "teenth", "Tuesday"));
 }
 
 static void test_tuesteenth_of_August_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13, meetup_day_of_month(2013, 8, "teenth", "Tuesday"));
 }
 
 static void test_wednesteenth_of_January_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16,
                          meetup_day_of_month(2013, 1, "teenth", "Wednesday"));
 }
 
 static void test_wednesteenth_of_February_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13,
                          meetup_day_of_month(2013, 2, "teenth", "Wednesday"));
 }
 
 static void test_wednesteenth_of_June_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19,
                          meetup_day_of_month(2013, 6, "teenth", "Wednesday"));
 }
 
 static void test_thursteenth_of_May_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16,
                          meetup_day_of_month(2013, 5, "teenth", "Thursday"));
 }
 
 static void test_thursteenth_of_June_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13,
                          meetup_day_of_month(2013, 6, "teenth", "Thursday"));
 }
 
 static void test_thursteenth_of_September_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19,
                          meetup_day_of_month(2013, 9, "teenth", "Thursday"));
 }
 
 static void test_friteenth_of_April_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19, meetup_day_of_month(2013, 4, "teenth", "Friday"));
 }
 
 static void test_friteenth_of_August_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19, meetup_day_of_month(2013, 4, "teenth", "Friday"));
 }
 
 static void test_friteenth_of_September_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13, meetup_day_of_month(2013, 9, "teenth", "Friday"));
 }
 
 static void test_saturteenth_of_February_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16,
                          meetup_day_of_month(2013, 2, "teenth", "Saturday"));
 }
 
 static void test_saturteenth_of_April_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13,
                          meetup_day_of_month(2013, 4, "teenth", "Saturday"));
 }
 
 static void test_saturteenth_of_October_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19,
                          meetup_day_of_month(2013, 10, "teenth", "Saturday"));
 }
 
 static void test_sunteenth_of_May_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(19, meetup_day_of_month(2013, 5, "teenth", "Sunday"));
 }
 
 static void test_sunteenth_of_June_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(16, meetup_day_of_month(2013, 6, "teenth", "Sunday"));
 }
 
 static void test_sunteenth_of_October_2013(void)
 {
+
    TEST_ASSERT_EQUAL_INT(13, meetup_day_of_month(2013, 10, "teenth", "Sunday"));
 }
 
 static void test_first_Monday_of_March_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(4, meetup_day_of_month(2013, 3, "first", "Monday"));
 }
 
 static void test_first_Monday_of_April_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(1, meetup_day_of_month(2013, 4, "first", "Monday"));
 }
 
 static void test_first_Tuesday_of_May_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(7, meetup_day_of_month(2013, 5, "first", "Tuesday"));
 }
 
 static void test_first_Tuesday_of_June_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(4, meetup_day_of_month(2013, 6, "first", "Tuesday"));
 }
 
 static void test_first_Wednesday_of_July_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(3, meetup_day_of_month(2013, 7, "first", "Wednesday"));
 }
 
 static void test_first_Wednesday_of_August_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(7, meetup_day_of_month(2013, 8, "first", "Wednesday"));
 }
 
 static void test_first_Thursday_of_September_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(5, meetup_day_of_month(2013, 9, "first", "Thursday"));
 }
 
 static void test_first_Thursday_of_October_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(3, meetup_day_of_month(2013, 10, "first", "Thursday"));
 }
 
 static void test_first_Friday_of_November_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(1, meetup_day_of_month(2013, 11, "first", "Friday"));
 }
 
 static void test_first_Friday_of_December_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(6, meetup_day_of_month(2013, 12, "first", "Friday"));
 }
 
 static void test_first_Saturday_of_January_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(5, meetup_day_of_month(2013, 1, "first", "Saturday"));
 }
 
 static void test_first_Saturday_of_February_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(2, meetup_day_of_month(2013, 2, "first", "Saturday"));
 }
 
 static void test_first_Sunday_of_March_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(3, meetup_day_of_month(2013, 3, "first", "Sunday"));
 }
 
 static void test_first_Sunday_of_April_2013(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_INT(7, meetup_day_of_month(2013, 4, "first", "Sunday"));
 }
 

@@ -11,17 +11,21 @@ char *count(const char *dna_strand) {
 
     for(int i = 0; i < (int) strlen(dna_strand); i++) {
         char nt = dna_strand[i];
-        switch(nt) {
+        switch( nt) {
             case 'A':
                 nt_count[0] += 1;
+                break;
             case 'C':
                 nt_count[1] += 1;
+                break;
             case 'G':
                 nt_count[2] += 1;
+                break;
             case 'T':
                 nt_count[3] += 1;
+                break;
             default:
-                return NULL;
+                return "";
         }
     }
     char temp[24] = "A:%d C:%d G:%d T:%d";

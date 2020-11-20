@@ -21,31 +21,26 @@ static void test_square_2(void)
 
 static void test_square_3(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT(4ull == square(3));
 }
 
 static void test_square_4(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT(8ull == square(4));
 }
 
 static void test_square_16(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT(32768ull == square(16));
 }
 
 static void test_square_32(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT(2147483648ull == square(32));
 }
 
 static void test_square_64(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT(9223372036854775808ull == square(64));
 }
 

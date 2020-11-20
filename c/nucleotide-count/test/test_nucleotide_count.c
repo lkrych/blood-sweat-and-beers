@@ -37,7 +37,6 @@ static void test_repeated_nucleotide(void)
 
 static void test_multiple_nucleotides(void)
 {
-   TEST_IGNORE();
    const char *dna_strand =
        "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC";
    const char *expected = "A:20 C:12 G:17 T:21";
@@ -47,7 +46,6 @@ static void test_multiple_nucleotides(void)
 
 static void test_invalid_nucleotide(void)
 {
-   TEST_IGNORE();
    const char *dna_strand = "AGXXACT";
    const char *expected = "";
 

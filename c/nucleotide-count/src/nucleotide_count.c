@@ -8,6 +8,8 @@ char *count(const char *dna_strand) {
         return NULL;
     }
     int nt_count[4] = {0, 0, 0, 0};
+    char* empty = malloc(sizeof(char) * 2);
+    empty[0] = '\0';
 
     for(int i = 0; i < (int) strlen(dna_strand); i++) {
         char nt = dna_strand[i];
@@ -25,7 +27,7 @@ char *count(const char *dna_strand) {
                 nt_count[3] += 1;
                 break;
             default:
-                return "";
+                return empty;
         }
     }
     char temp[24] = "A:%d C:%d G:%d T:%d";
